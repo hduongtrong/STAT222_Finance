@@ -103,5 +103,5 @@ if __name__ == '__main__':
     except NameError:
         X, y, train, valid, test = GetData()
     model.set_params(**params[model.__class__.__name__])
-    model.fit(X[train[::2]], y[train[::2]])
+    model.fit(X[train], y[train])
     print model.score(X[valid], y[valid])
